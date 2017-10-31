@@ -41,14 +41,14 @@ We use simple natural language processing methods to get more insights into the 
 
 ## 1. Handle the raw data & general data analysis (to be done before nov. 12th)
 0. Check how we get data on our computer and how we can handle the large volume of data.
-1. Learn how dataset is encoded, how specific the geomarkers are, and if sentiment stamps are useful to our question.
+1. Learn how the dataset is encoded, how specific the geomarkers are, and if sentiment stamps are useful to our question.
 2. Look at the overall distribution of the tweets' languages, and check for issues with non-standardization of Swiss German.
     -> also look at regional distribution.
 3. Look at how frequent the use of emojis is, what methods to use to handle them.
 4. Look into handling time dimension of data, look at distribution of tweets over time.
 5. See to what extent Swiss News outlets talk about mental health.
 6. Find potential issues with data, are there any NaN values, how can we deal with bots and spam etc.
-( *Read papers that might give us interesting insights)
+(*Read papers that might give us interesting insights)
 
 ## 2. See how we can transform the data (to be done before nov. 18th)
 1. Look more closely into what NLP techniques work best on our data and begin to form our dictionary.
@@ -59,14 +59,14 @@ We use simple natural language processing methods to get more insights into the 
 ## 3. Work on notebook and future plans (until deadline nov. 28th)
 
 1. Work on properly commented notebook that can be read by people outside the team.
-2. Have nice visualisations and first results in notebook.
+2. Have a nice visualisations and first results in notebook.
 
 
-# Questions for TAa
+# Questions for TAs
 1. What is a good scope of the projet, e.g. is our project too ambitious or not ambitious enough?
 -> The mental health stigma part might be too much and we weren't sure if we should include it or not/or instead center our project around it.
 -> What are the 'expecations'?
-2. Regarding the second step of our methodology can we use external libraries or help to define the dictionary?
+2. Regarding the second step of our methodology, can we use external libraries or help to define the dictionary?
 3. How should we best get data from the 200 years news source, how can we deal with the issue that it only covers francophone media? Can we use other new sources to have more recent data (same time as tweets)?
 
 

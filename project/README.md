@@ -41,14 +41,33 @@ List the dataset(s) you want to use, and some ideas on how do you expect to get,
 3. Use the emojis in order to define the best elements
 4. Find trends allowing us to broaden our research or tweak our model to iterate on these steps
 
-
-
 # A list of internal milestones up until project milestone 2
 Add here a sketch of your planning for the next project milestone.
 
-1. See how dataset is coded, how specific the geomarkers are, and if sentiment stamps are useful to our question
-2. Look at the languages of the tweets (overall distribution, issues with Swiss German), find way to filter tweets that interest us
-3. See to what extent swiss news outlets talk about mental health
+## 1. handel the raw data & general data analysis (to be done before nov. 12th)
+0. Check how we get data on our computer and how we can handel the large volume of data
+1. Learn how dataset is encoded, how specific the geomarkers are, and if sentiment stamps are useful to our question
+2. Look at the languages of the tweets overall distribution, and check for issues with non-standardizedness of Swiss German
+    -> also look at regional distribution
+3. Look at how frequent the use of emojis is, what methods to use to handel them
+4. Look into handeling time dimension of data, look at distribution of tweets over time
+
+5. See to what extent swiss news outlets talk about mental health
+
+6. Find potential issues with data, are there any nan values, how can we deal with bots and spam etc.
+
+( *Read papers that might give us interesting insights)
+
+## 2. See how we can transform the data (to be done before nov. 18th)
+1. Look more closely into what nlp techniques work best on our data and begin to form our dictionary
+2. Fliter the tweets down to a dataset that interests us, check if size of dataset is reasonable
+3. Check how we can look at the tweets in a temporal manner, what statistical tools we should use to be able to draw concusions
+4. Look into ways we can visualize our data
+
+## 3. work on notebook and future plans (until deadline nov. 28th)
+
+1. work on properly commented note book that can be read by outsiders
+2. have nice visualisations and first results in notebook
 
 
 # Questions for TAa

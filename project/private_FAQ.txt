@@ -1,0 +1,11 @@
+1. How do we deal with this in Spark uniquely?
+The idea of Spark is using RDDs, so the data is not actually all loaded. We need to check more precisely how to do this (but there is no passage with Pandas, we only use Spark as presented in the Slides).
+
+2. We will have to prefilter, we can't load everything in frame anyway
+Once again, we do everything using Spark (has a method filter). The only issue with Spark is that you cannot "see" the data right away. Thus, the best is to use Pandas to determine what are the best things to do in order to clean our data (maybe drop a lot of useless columns).
+
+3. So best do it in spark, but how?
+Cf above
+
+4. There should be a way to use the schema file to help..but how?
+Probably used only to drop useless columns (like Places, no need for that or the lat/lon). We can also use it to determine what we want. User id allows us to see if many users talk about the same thing, or how users interact (retweets, …).

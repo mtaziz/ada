@@ -1,0 +1,32 @@
+Statistics:
+
+https://www.swissinfo.ch/eng/up-to-one-in-three-has-psychological-problems/32479022
+- 30-35 per cent of the population suffers from mental disorders
+- he Swiss Health Observatory released a report stating that “it is possible that 17 per cent of the population could be suffering from psychological disorders”.
+- On average some 38.2 per cent of people in Europe suffer from psychological disorders, the report states.
+
+
+Natural Language Processing:
+- we should use stemming before trying to find dictionary matches to find matches accordingly
+- lemmatisation or stemming not both.
+- I don't see the purpose of LDA\VSA
+- We should use Ngrams for? <- analyze coccurring words?
+- I think ski-kit learn does most of this for us, at least LSI
+- machine learning would be cool but supervised -> we have to lable tweets: has been done with ca 4000
+- most similar studies use superwised learning
+ - unsupervised: KNN maybe?
+
+Handling data over time:
+- since we are dealing with 6 months, look at month differences, just use timestamp group by month and analyze data by month using plots
+
+1) Remove text which starts from http[^\\s]+
+2) Remove hashtag #, @, RT@
+3) Remove Unicode characters /([\ud800-\udbff][\udc00-\udfff])|./g
+4) Convert to lowercase
+5) Remove hyperlinks
+
+
+http://www.laurentluce.com/posts/twitter-sentiment-analysis-using-python-and-nltk/
+
+We can remove positive tweets!
+https://public-health.ch/de/aktivit%C3%A4ten/fachgruppen/mentalhealth/

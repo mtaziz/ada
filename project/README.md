@@ -50,9 +50,9 @@ We looked at the given datasets but found that there was not enough available in
 - draw plots looking at regional distribution
 - 
 
-### 3. Finish report and analysis (until deadline nov. 18th)
--finish report
--finish notebook
+### 3. Finish report and analysis (until deadline dec. 19th)
+- finish report
+- finish notebook
 
 ## A list of internal milestones up until project milestone 2
 <_We will discuss all these questions in the Notebooks. We only keep this on the README so that you that can see the problems we tackled._>

@@ -85,10 +85,6 @@ We looked at the given datasets but found that there was not enough available in
 2. Have a nice visualisations and first results in notebook.
 
 # Questions for TAs
-1. What is a good scope of the projet, e.g. is our project too ambitious or not ambitious enough?
--> The mental health stigma part might be too much and we weren't sure if we should include it or not/or instead center our project around it.
--> What are the 'expecations'?
-2. Regarding the second step of our methodology, can we use external libraries or help to define the dictionary?
-3. How should we best get data from the 200 years news source, how can we deal with the issue that it only covers francophone media? Can we use other new sources to have more recent data (same time as tweets)?
+None.
 
 

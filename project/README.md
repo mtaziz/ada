@@ -44,7 +44,7 @@ We looked at the given datasets but found that there was not enough available in
 ### 1. Finish NLP pipeline & label tweets & report basics (to be done before dec. 3th)
 1. write intoduction and methology part of paper
 2. label tweets so we can narrow down the best tweets
-(*Read papers that might give us interesting insights)
+
 
 ### 2. Analyze datset to respond to questions (to be done before dec. 10th)
 - do the LDA and look at related words
@@ -59,32 +59,31 @@ We looked at the given datasets but found that there was not enough available in
 - finish report
 - finish notebook
 
-## A list of internal milestones up until project milestone 2
+## A list of internal milestones up until project milestone 2 ✓
 <_We will discuss all these questions in the Notebooks. We only keep this on the README so that you that can see the problems we tackled._>
 
 ### 1. Handle the raw data & general data analysis (to be done before nov. 12th)
-0. Check how we get data on our computer and how we can handle the large volume of data.
-1. Learn how the dataset is encoded, how specific the geomarkers are, and if sentiment stamps are useful to our question.
-2. Look at the overall distribution of the tweets' languages, and check for issues with non-standardization of Swiss German.
+0. Check how we get data on our computer and how we can handle the large volume of data. ✓
+1. Learn how the dataset is encoded, how specific the geomarkers are, and if sentiment stamps are useful to our question. ✓
+2. Look at the overall distribution of the tweets' languages, and check for issues with non-standardization of Swiss German. ✓
     -> also look at regional distribution.
-3. Look at how frequent the use of emojis is, what methods to use to handle them.
-4. Look into handling time dimension of data, look at distribution of tweets over time.
-5. See to what extent Swiss News outlets talk about mental health.
-6. Find potential issues with data, are there any NaN values, how can we deal with bots and spam etc.
+3. Look at how frequent the use of emojis is, what methods to use to handle them. (removed from research question)
+4. Look into handling time dimension of data, look at distribution of tweets over time. ✓
+5. See to what extent Swiss News outlets talk about mental health. (removed from research question)
+6. Find potential issues with data, are there any NaN values, how can we deal with bots and spam etc. ✓
 (*Read papers that might give us interesting insights)
 
 ### 2. See how we can transform the data (to be done before nov. 18th)
-1. Look more closely into what NLP techniques work best on our data and begin to form our dictionary.
-2. Filter the tweets down to a dataset that interests us, check if size of dataset is reasonable.
-3. Check how we can look at the tweets in a temporal manner, what statistical tools we should use to be able to draw conclusions.
-4. Look into ways we can visualize our data.
+1. Look more closely into what NLP techniques work best on our data and begin to form our dictionary. ✓
+2. Filter the tweets down to a dataset that interests us, check if size of dataset is reasonable. ✓
+3. Check how we can look at the tweets in a temporal manner, what statistical tools we should use to be able to draw conclusions. (not a big issue as only over period of 6 months)
+4. Look into ways we can visualize our data. ✓ (barcharts and co., folium)
 
 ### 3. Work on notebook and future plans (until deadline nov. 28th)
 
-1. Work on properly commented notebook that can be read by people outside the team.
-2. Have a nice visualisations and first results in notebook.
+1. Work on properly commented notebook that can be read by people outside the team. ✓
+2. Have a nice visualisations and first results in notebook. (not really needed at this point, dataset was provided late)
 
 # Questions for TAs
-None.
 
 

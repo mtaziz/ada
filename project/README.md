@@ -29,7 +29,7 @@ We looked at the given datasets but found that there was not enough available in
 
 ### Methology
 0. Data exploration, check if we can actualy find any issues with twitter data and make sure to handle them. (For example depression can be used in an economic way).
-1. Use simple natural language processing methods (LSI, pLSI, LDA and VSM using stemming and n-grams) to preform analysis on data set.
+1. Use simple natural language processing methods (LDA using stemming and n-grams) to preform analysis on data set.
 2. Determine a dictionary of keywords linked to mental health and emotion identifiers (and possibly, if time allows, use Machine Learning algorithms to broaden it along our work).
 3. Filter tweets by the dictionary and construct a dataset we can work with on. Such as, number of tweets containing dictonary entry by region, season, language.
 4. Find trends allowing us to broaden our research or tweak our model to iterate on those steps.

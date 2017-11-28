@@ -1,4 +1,6 @@
 # Mental Health in Switzerland
+ our notebook can be found at [project.ipynb](project.ipynb)
+
 
 ## Abstract
 Social media, such as Twitter, provide a unique look into people’s feelings and thoughts. As such, aggregated data from social media has previously been successfully used to identify depression and other mental illnesses in users. However, most studies on this subject tend to focus only on clinical depression, which is a very specific condition that is not indicative of the general mental health of the population.
@@ -18,7 +20,6 @@ To achieve this goal, we use simple natural language processing methods to get m
 - To what extent is Twitter representative of the country’s health census?
 
 ### Mental Health: what we think about it {REMOVED}
-
 We looked at the given datasets but found that there was not enough available information covering our subject. Moreover, as you mentioned in the 1st milestone feedback, the 1st research question is already a lot of work. For both reasons, we decided to drop this question.
 
 ## Dataset
@@ -28,35 +29,30 @@ We looked at the given datasets but found that there was not enough available in
 
 ### Methology
 0. Data exploration, check if we can actualy find any issues with twitter data and make sure to handle them. (For example depression can be used in an economic way).
-1. Use simple natural language processing methods (LSI, pLSI, LDA and VSM using lemmatization, stemming and n-grams) to preform analysis on data set.
+1. Use simple natural language processing methods (LSI, pLSI, LDA and VSM using stemming and n-grams) to preform analysis on data set.
 2. Determine a dictionary of keywords linked to mental health and emotion identifiers (and possibly (if time allows) use Machine Learning algorithms to broaden it along our work).
 3. Filter tweets by the dictionary and construct a dataset we can work with on. Such as, number of tweets containing dictonary entry by region, season, language.
 4. Find trends allowing us to broaden our research or tweak our model to iterate on those steps.
 5. Use the news data set by using keywords from the dictionary (previously built).
 
+## Milestones poster presentation (Jan. 29-30, 2018)
+
+1. work on poster 19-29 january
+
 ## A list of internal milestones up until project milestone 3
 
-### 1. Handle the raw data & general data analysis (to be done before nov. 12th)
-0. Check how we get data on our computer and how we can handle the large volume of data.
-1. Learn how the dataset is encoded, how specific the geomarkers are, and if sentiment stamps are useful to our question.
-2. Look at the overall distribution of the tweets' languages, and check for issues with non-standardization of Swiss German.
-    -> also look at regional distribution.
-3. Look at how frequent the use of emojis is, what methods to use to handle them.
-4. Look into handling time dimension of data, look at distribution of tweets over time.
-5. See to what extent Swiss News outlets talk about mental health.
-6. Find potential issues with data, are there any NaN values, how can we deal with bots and spam etc.
+### 1. Finish NLP pipeline & label tweets & report basics (to be done before dec. 3th)
+1. write intoduction and methology part of paper
+2. label tweets so we can narrow down the best tweets
 (*Read papers that might give us interesting insights)
 
-### 2. See how we can transform the data (to be done before nov. 18th)
-1. Look more closely into what NLP techniques work best on our data and begin to form our dictionary.
-2. Filter the tweets down to a dataset that interests us, check if size of dataset is reasonable.
-3. Check how we can look at the tweets in a temporal manner, what statistical tools we should use to be able to draw conclusions.
-4. Look into ways we can visualize our data.
+### 2. Analize datset to respond to questions (to be done before dec. 10th)
+- draw plots looking at regional distribution
+- 
 
-### 3. Work on notebook and future plans (until deadline nov. 28th)
-
-1. Work on properly commented notebook that can be read by people outside the team.
-2. Have a nice visualisations and first results in notebook.
+### 3. Finish report and analysis (until deadline dec. 19th)
+- finish report
+- finish notebook
 
 ## A list of internal milestones up until project milestone 2
 <_We will discuss all these questions in the Notebooks. We only keep this on the README so that you that can see the problems we tackled._>

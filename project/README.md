@@ -46,9 +46,14 @@ We looked at the given datasets but found that there was not enough available in
 2. label tweets so we can narrow down the best tweets
 (*Read papers that might give us interesting insights)
 
-### 2. Analize datset to respond to questions (to be done before dec. 10th)
+### 2. Analyze datset to respond to questions (to be done before dec. 10th)
+- do the LDA and look at related words
 - draw plots looking at regional distribution
-- 
+- plot most frequent words present
+- plot occurence regarding date (winter/summer)
+- look at different between different categories (male/female, negative/neutral sentiment, languages)
+- map of sentiment per region (folium)
+- compare to swiss mental health statistics.
 
 ### 3. Finish report and analysis (until deadline dec. 19th)
 - finish report

@@ -1,15 +1,4 @@
-from pyspark.sql import *
-from pyspark import SparkContext, SQLContext
-from pyspark.sql.functions import regexp_replace, col, lower, explode
-from pyspark.sql import SparkSession
-
-spark = SparkSession \
-    .builder \
-    .appName("Python Spark SQL") \
-    .config("spark.some.config.option", "some-value") \
-    .getOrCreate()
-
-df = spark.read.json('swiss-tweet/')
+df = sqlContext.read.json('/datasets/swiss-tweet/')
 
 #remove nesting
 df = df.select('_source.*')
@@ -37,4 +26,4 @@ df = df.filter(~(df.main.contains('http')))\
     .filter(~(df.main.contains('RT')))
 
 
-df.write.json('reduced_tweets') #write dataframe to folder in json format
+df.write.json('/user/benchekr/reduced_tweets') #write dataframe to folder in json format

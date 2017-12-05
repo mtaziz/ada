@@ -1,1 +1,4 @@
+*.csv
+*json
+*.zip
 /twitter-swisscom/twex.tsv

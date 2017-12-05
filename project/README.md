@@ -11,16 +11,13 @@ To achieve this goal, we use simple natural language processing methods to get m
 
 ## Research questions
 
-### Mental Health : where we stand {IMPROVED}
+### Mental Health : where we stand
 - What indicators of mental health issues can we find in tweets? (We already define our own dictionnary. However, we suppose that using other methods, we can find more related word, giving the needed insights.)
 - What percentage of tweets / how many accounts show such indicators?
 - Can we see a difference between the genders ?
 - Can we find seasonal patterns? Winter VS Summer? (Seasonal Affective Disorder for the year 2016)
 - Can we see linguistic patterns? (This would allow us to have an insight on the Röstigraben issue)
 - To what extent is Twitter representative of the country’s health census?
-
-### Mental Health: what we think about it {REMOVED}
-We looked at the given datasets but found that there was not enough available information covering our subject. Moreover, as you mentioned in the 1st milestone feedback, the 1st research question is already a lot of work. For both reasons, we decided to drop this question.
 
 ## Dataset
 

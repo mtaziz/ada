@@ -1,3 +1,14 @@
+#! /bin/python
+#from pyspark.sql import *
+#from pyspark import SparkContext, SQLContext
+#from pyspark import SparkContext, SparkConf
+
+
+from pyspark.sql.functions import regexp_replace, col, lower, explode
+
+
+sc = SparkContext()
+sqlContext = SQLContext(sc)
 df = sqlContext.read.json('/datasets/swiss-tweet/')
 
 #remove nesting
@@ -19,11 +30,11 @@ df = df.withColumn('main', regexp_replace(col('main'), 'pic.twitter\S+', ' '))#r
 df = df.withColumn('main', regexp_replace(col('main'), '@\S+', ' '))#remove mentions
 
 #remove websites and retweets
-df = df.filter(~(df.main.contains('http')))\
-    .filter(~(df.main.contains('.com')))\
-    .filter(~(df.main.contains('.ch')))\
-    .filter(~(df.main.contains('www')))\
-    .filter(~(df.main.contains('RT')))
+df = df.where(~df.main.like("%http%"))
+df = df.where(~df.main.like("%.com%"))
+df = df.where(~df.main.like("%.ch%"))
+df = df.where(~df.main.like("%www%"))
+df = df.where(~df.main.like("%rt%"))
 
 
-df.write.json('/user/benchekr/reduced_tweets') #write dataframe to folder in json format
+df.write.json('reduced_tweets.json') #write dataframe to folder in json format

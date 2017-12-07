@@ -15,14 +15,14 @@ df = sqlContext.read.json('/datasets/swiss-tweet/')
 df = df.select('_source.*')
 
 #columns we care about
-columns = ['main', 'published', 'source_spam_probability', 'source_location', 'tags', 'lang', 'sentiment',
-                   'author_gender', 'source_followers', 'source_following']
+columns = ['main', 'author_user_id','published', 'source_spam_probability', 'source_location', 'tags', 'lang', 'sentiment',
+                   'author_gender', 'source_followers', 'source_following', 'geo_point']
 
 #get only relevant columns
 df = df[columns]
 
 df = df.filter(df.lang.isin('en', 'de', 'fr'))  #gets tweets with right language
-df = df.filter(df.sentiment != 'POSITIVE') #remove positive sentient tweets
+#df = df.filter(df.sentiment != 'POSITIVE') #remove positive sentient tweets
 df = df.filter(df.source_spam_probability < 0.5) #remove spam
 df = df.withColumn('main', lower(df.main)) #get lower case
 

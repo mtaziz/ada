@@ -1,5 +1,6 @@
-*.csv
-!labeledtweets/
+!/keyword_frames/
+!/labeledtweets/
 *json
 *.zip
 /twitter-swisscom/twex.tsv
+*.csv

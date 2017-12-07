@@ -10,11 +10,14 @@ import pickle
 #read from line
 lang = sys.argv[1]
 topics = int(sys.argv[2])
-
+negative = bool(sys.argv[3])
 #read from pickle
 df = pickle.load( open( "processed_tweets.pkl", "rb" ))
 print('loaded from pickle')
 language_df = df[df.lang == lang].tokenized
+if(negative):
+    print('only looking at neutral and negative tweets')
+    df= df[(df.sentiment == 'NEUTRAL') | (df.sentiment == 'NEGATIVE')]
 #get einglish words
 dictionary = corpora.Dictionary(language_df)
 #remove overly common and too rare

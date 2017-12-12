@@ -10,15 +10,16 @@ import pickle
 #read from line
 lang = sys.argv[1]
 topics = int(sys.argv[2])
-negative = bool(sys.argv[3])
+
 #read from pickle
 df = pickle.load( open( "processed_tweets.pkl", "rb" ))
 print('loaded from pickle')
 language_df = df[df.lang == lang].tokenized
-if(negative):
-    print('only looking at neutral and negative tweets')
-    df= df[(df.sentiment == 'NEUTRAL') | (df.sentiment == 'NEGATIVE')]
-#get einglish words
+
+print('only looking at neutral and negative tweets')
+df= df[(df.sentiment == 'NEGATIVE')]
+
+#get english words
 dictionary = corpora.Dictionary(language_df)
 #remove overly common and too rare
 dictionary.filter_extremes(no_below=3, no_above=.5)
@@ -28,5 +29,5 @@ corpus = [dictionary.doc2bow(text) for text in texts]
 print('created corpus')
 ldamodel = models.LdaMulticore(corpus, id2word=dictionary, num_topics=topics, workers=3) #takes like 5minutes on leo's pc
 print('built model')
-ldamodel.save('general_lda_'+lang+'.model')
+ldamodel.save('models/general_lda_'+lang+'_negative.model')
 print('saving model 💾')

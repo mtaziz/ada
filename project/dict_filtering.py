@@ -49,48 +49,53 @@ df = pickle.load( open( "processed_tweets.pkl", "rb" ))
 print('loaded dataframe from pickle')
 
 #load dictionary
-DICT_PATH = "dictionary.csv"
+DICT_PATH = "dictionary_th2.csv"
 dictionaries = pd.read_csv(DICT_PATH)
 
 print('loaded dict')
 #define languages for dict
-# en_dict = dictionaries['english'].dropna()
+en_dict = dictionaries['english'].dropna()
 fr_dict = dictionaries['french'].dropna()
-# de_dict = pd.concat([dictionaries['german'].dropna(), dictionaries['swiss_german'].dropna()])
+de_dict = dictionaries['german'].dropna()
 
 #clean dict
 # dict_cleaning('en')
 dict_cleaning('fr')
-# dict_cleaning('de')
+dict_cleaning('de')
 print('cleaned dict')
 #Tokenizing
 tknzr = TweetTokenizer()
 
-# en_dict = en_dict.map(lambda x: tknzr.tokenize(x))
+en_dict = en_dict.map(lambda x: tknzr.tokenize(x))
 fr_dict = fr_dict.map(lambda x: tknzr.tokenize(x))
-# de_dict = de_dict.map(lambda x: tknzr.tokenize(x))
+de_dict = de_dict.map(lambda x: tknzr.tokenize(x))
 print('tokenized dict')
 #Removing stop words
-# dict_remove_stops('english')
+dict_remove_stops('english')
 dict_remove_stops('french')
-# dict_remove_stops('german')
+dict_remove_stops('german')
 
 print('removed stops in dict')
 #Stemming the words
-# dict_stem_words('english')
+dict_stem_words('english')
 dict_stem_words('french')
-# dict_stem_words('german')
+dict_stem_words('german')
 print('stemmed words in dict')
 
-# english= df[df.lang == 'en']['tokenized'].map(lambda x: match_dict(x, en_dict))
-# df['keywords'] = english
-# print('found and added keywords: english')
-# df['keywords']= df[df.lang == 'de']['tokenized'].map(lambda x: match_dict(x, de_dict))
-# print('found and added keywords: german')
+english= df[df.lang == 'en']['tokenized'].map(lambda x: match_dict(x, en_dict))
+df['keywords'] = english
+print('found and added keywords: english')
+df.to_pickle('keyword_frames/english_keyworded_tweets.pkl')
+print('writing english keyword dataframe to pickel 🥒 🥒 😋')
+
+
+df['keywords']= df[df.lang == 'de']['tokenized'].map(lambda x: match_dict(x, de_dict))
+print('found and added keywords: german')
+df.to_pickle('keyword_frames/german_keyworded_tweets.pkl')
+print('writing german keyword dataframe to pickel 🥒 🥒 😋')
+
+
 df['keywords']= df[df.lang == 'fr']['tokenized'].map(lambda x: match_dict(x, fr_dict))
 print('found and added keywords: french')
-
-del df['cleaned']
-
-df[df.lang == 'fr'].to_pickle('french_keyworded_tweets.pkl')
-print('writing keyword dataframe to pickel 🥒 🥒 😋')
+df.to_pickle('keyword_frames/french_keyworded_tweets.pkl')
+print('writing french keyword dataframe to pickel 🥒 🥒 😋')

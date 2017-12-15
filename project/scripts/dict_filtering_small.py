@@ -46,7 +46,7 @@ df = pickle.load( open( "../data/spinn3r_tweets/processed_tweets.pkl", "rb" ))
 print('loaded dataframe from pickle')
 
 #load dictionary
-DICT_PATH = "../data/dictionaries/dict_2.csv"
+DICT_PATH = "../data/dictionaries/dict_1.csv"
 dictionaries = pd.read_csv(DICT_PATH)
 
 print('loaded dict')
@@ -82,17 +82,17 @@ print('stemmed words in dict')
 english= df[df.lang == 'en']['tokenized'].map(lambda x: match_dict(x, en_dict))
 df['keywords'] = english
 print('found and added keywords: english')
-df.to_pickle('../data/keyword_tweets/english_keyworded_tweets.pkl')
+df.to_pickle('../data/keyword_tweets/small_english_keyworded_tweets.pkl')
 print('writing english keyword dataframe to pickel 🥒 🥒 😋')
 
 
 df['keywords']= df[df.lang == 'de']['tokenized'].map(lambda x: match_dict(x, de_dict))
 print('found and added keywords: german')
-df.to_pickle('../data/keyword_tweets/german_keyworded_tweets.pkl')
+df.to_pickle('../data/keyword_tweets/small_german_keyworded_tweets.pkl')
 print('writing german keyword dataframe to pickel 🥒 🥒 😋')
 
 
 df['keywords']= df[df.lang == 'fr']['tokenized'].map(lambda x: match_dict(x, fr_dict))
 print('found and added keywords: french')
-df.to_pickle('../data/keyword_tweets/french_keyworded_tweets.pkl')
+df.to_pickle('../data/keyword_tweets/small_french_keyworded_tweets.pkl')
 print('writing french keyword dataframe to pickel 🥒 🥒 😋')

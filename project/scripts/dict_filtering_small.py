@@ -10,7 +10,7 @@ import pickle
 
 #FUNCTIONS
 def dict_cleaning(dicts):
-    return dicts.astype(str).str.lower()
+    return dicts.astype(str).str.lower().str.replace(r'[^\w\s]', ' ')
 
 def dict_remove_stops(dictionary, language):
     lang = language[:2]
@@ -56,7 +56,7 @@ fr_dict = dictionaries['french'].dropna()
 de_dict = dictionaries['german'].dropna()
 
 #clean dict
-en_dict =  dict_cleaning(en_dict)
+en_dict = dict_cleaning(en_dict)
 fr_dict = dict_cleaning(fr_dict)
 de_dict = dict_cleaning(de_dict)
 print('cleaned dict')
@@ -68,9 +68,9 @@ fr_dict = fr_dict.map(lambda x: tknzr.tokenize(x))
 de_dict = de_dict.map(lambda x: tknzr.tokenize(x))
 print('tokenized dict')
 #Removing stop words
-fr_dict = dict_remove_stops(fr_dict, 'french')
-en_dict = dict_remove_stops(en_dict, 'english')
-de_dict = dict_remove_stops(de_dict, 'german')
+# fr_dict = dict_remove_stops(fr_dict, 'french')
+# en_dict = dict_remove_stops(en_dict, 'english')
+# de_dict = dict_remove_stops(de_dict, 'german')
 
 print('removed stops in dict')
 #Stemming the words
@@ -82,17 +82,17 @@ print('stemmed words in dict')
 english= df[df.lang == 'en']['tokenized'].map(lambda x: match_dict(x, en_dict))
 df['keywords'] = english
 print('found and added keywords: english')
-df.to_pickle('../data/keyword_tweets/small_english_keyworded_tweets.pkl')
+df[df.lang == 'en'].to_pickle('../data/spinn3r_tweets/keyword_tweets/small_english_keyworded_tweets.pkl')
 print('writing english keyword dataframe to pickel 🥒 🥒 😋')
 
 
 df['keywords']= df[df.lang == 'de']['tokenized'].map(lambda x: match_dict(x, de_dict))
 print('found and added keywords: german')
-df.to_pickle('../data/keyword_tweets/small_german_keyworded_tweets.pkl')
+df[df.lang == 'de'].to_pickle('../data/spinn3r_tweets/keyword_tweets/small_german_keyworded_tweets.pkl')
 print('writing german keyword dataframe to pickel 🥒 🥒 😋')
 
 
 df['keywords']= df[df.lang == 'fr']['tokenized'].map(lambda x: match_dict(x, fr_dict))
 print('found and added keywords: french')
-df.to_pickle('../data/keyword_tweets/small_french_keyworded_tweets.pkl')
+df[df.lang == 'fr'].to_pickle('../data/spinn3r_tweets/keyword_tweets/small_french_keyworded_tweets.pkl')
 print('writing french keyword dataframe to pickel 🥒 🥒 😋')

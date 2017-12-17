@@ -25,7 +25,7 @@ def stem_words(language, cleaned, frame):
         apply(lambda tweet: [stemmer.stem(word) for word in tweet])
 
 #read from json
-df = pd.read_json('tweets.json', lines=True)
+df = pd.read_json('../data/spinn3r_tweets/tweets.json', lines=True)
 
 #changing time
 df['published'] = pd.to_datetime(df['published'])
@@ -34,6 +34,7 @@ df['published'] = pd.to_datetime(df['published'])
 df['cleaned'] = df['main'].str.replace("@\S+", '')
 df['cleaned'] = df['cleaned'].str.replace('_', '') #not removed by following regex
 df['cleaned'] = df['cleaned'].str.replace(r'[^\w\s]', ' ')
+
 print('cleaned!')
 #tokenize
 tknzr = TweetTokenizer()
@@ -41,14 +42,14 @@ tokenized = df['cleaned'].map(lambda x: tknzr.tokenize(x))
 print('tokenized!')
 df['tokenized'] = tokenized
 #stopword removal
-remove_stops('english', df, 'tokenized')
-remove_stops('french', df, 'tokenized')
-remove_stops('german', df, 'tokenized')
-print('stopwords are gone!')
+# remove_stops('english', df, 'tokenized')
+# remove_stops('french', df, 'tokenized')
+# remove_stops('german', df, 'tokenized')
+# print('stopwords are gone!')
 #stem words
 stem_words('english', df, 'tokenized')
 stem_words('french', df, 'tokenized')
 stem_words('german', df, 'tokenized')
 print('stemmed words!')
-df.to_pickle('processed_tweets.pkl')
+df.to_pickle('../data/spinn3r_tweets/processed_tweets.pkl')
 print('done! 💅 😍')

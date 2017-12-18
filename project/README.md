@@ -3,8 +3,8 @@
 
 
 ## Contributions
-- Léonore : Project formulation, matching algorithm, plotting graphs, data cleaning, writing report, NLP pipeline update
-- Othman : NLP pipeline, data cleaning, labeling tweets, dictionary update, writing report
+- Léonore : Project formulation, methodology, matching algorithm, plotting graphs, data cleaning, writing report, NLP pipeline update
+- Othman : NLP pipeline, data cleaning, labeling tweets, dictionary update, writing report, notebook organisation
 - Saskia : Beautify graphs, proofread report and notebook
 
 (yes we were basically two people working on this projet )

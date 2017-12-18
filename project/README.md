@@ -7,8 +7,6 @@
 - Othman : NLP pipeline, data cleaning, labeling tweets, dictionary update, writing report, notebook organisation
 - Saskia : Beautify graphs, proofread report and notebook
 
-(yes we were basically two people working on this projet )
-
 ## Abstract
 Social media, such as Twitter, provide a unique look into people’s feelings and thoughts. As such, aggregated data from social media has previously been successfully used to identify depression and other mental illnesses in users. However, most studies on this subject tend to focus only on clinical depression, which is a very specific condition that is not indicative of the general mental health of the population.
 

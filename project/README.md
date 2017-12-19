@@ -3,9 +3,9 @@
 
 
 ## Contributions
-- Léonore : Project formulation, methodology, matching algorithm, plotting graphs, data cleaning, writing report, NLP pipeline update
-- Othman : NLP pipeline, data cleaning, labeling tweets, dictionary update, writing report, notebook organisation
-- Saskia : Beautify graphs, proofread report and notebook
+- Léonore : project formulation, methodology, data cleaning, NLP pipeline update, matching algorithm, plotting graphs,  writing report.
+- Othman : data cleaning, NLP pipeline, labeling tweets, dictionary update, writing report, notebook organisation.
+- Saskia : beautify graphs, proofread report and notebook.
 
 ## Abstract
 Social media provide a unique look into people’s feelings and thoughts. Twitter, due to its relative anonymity, can provide a honest look at how people deal with taboo topics such mental illness. As such, aggregated data from Twitter has previously been used to identify depression in users, among other mental illnesses, but also to measure – on a smaller scale – the public’s opinion on this subject [https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4217192/].
@@ -16,7 +16,6 @@ Our dataset is refined using this dictionary, allowing us to analyze the resulti
 
 ## Research questions
 
-### Mental Health :
 - What indicators of mental health issues can we find in tweets? (We already define our own dictionnary. However, we suppose that using other methods, we can find more related word, giving us new insights.)
 - What percentage of tweets / how many accounts show such indicators?
 - Can we see linguistic patterns?

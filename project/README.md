@@ -1,5 +1,6 @@
 # Mental Health in Switzerland
  Our notebook can be found at [project.ipynb](project.ipynb)
+ Our report can be found at [report.pdf](report.pdf)
 
 
 ## Contributions

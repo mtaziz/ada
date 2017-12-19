@@ -1,5 +1,5 @@
 # Mental Health in Switzerland
- Our notebook can be found at [project.ipynb](project.ipynb)
+ Our notebook can be found at [project.ipynb](project.ipynb) or directly on [NBViewer](http://nbviewer.jupyter.org/github/othmanbck/ada/blob/master/project/project.ipynb)
  Our report can be found at [report.pdf](report.pdf)
 
 

@@ -18,8 +18,8 @@ Our dataset is refined using this dictionary, allowing us to analyze the resulti
 
 - What indicators of mental health issues can we find in tweets? (We already define our own dictionnary. However, we suppose that using other methods, we can find more related word, giving us new insights.)
 - What percentage of tweets / how many accounts show such indicators?
-- Can we see linguistic patterns?
-- Can we see a difference between the genders ?
+- Can we see linguistic patterns? Regional patterns?
+- Can we see a difference between the genders?
 - Can we find seasonal patterns? Winter VS Summer?
 - To what extent is Twitter representative of the country’s health census?
 
